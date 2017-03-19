@@ -1,0 +1,14 @@
+{
+  "beers": [
+    {
+      "name": "Vivla la vita",
+      "type": "APA",
+      "brewery": "Pinta",
+      "origin": "Poland",
+      "bitterness": "30 IBU",
+      "alcohol_content": "6%",
+      "hops": "american",
+      "malts": "pale ale"
+    }
+  ]
+}
