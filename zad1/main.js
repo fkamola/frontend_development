@@ -35,7 +35,7 @@ function getBeersJSON() {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', 'data.json', true);
-    xobj.onreadystatechange = function (data) {
+    xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
             beers = JSON.parse(xobj.response);
             beers = beers.beers;
@@ -46,14 +46,11 @@ function getBeersJSON() {
 
 (function init() {
 
-    var data;
-    var that = this;
-
     getBeersJSON();
 
     setTimeout(function () {
         console.log(beers);
-        addBeer('Atak Chmielu', 'IPA', 'Pinta', 'Poland', '75 IBU', '5%', 'American', 'Pale Ale');
+        addBeer('Atak Chmielu', 'IPA', 'Pinta', 'Poland', '75 IBU', '5%', 'American', 'pale ale');
         showBeersTable();
     }, 200)
 })();
