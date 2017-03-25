@@ -1,7 +1,7 @@
 {
   "beers": [
     {
-      "name": "Vivla la vita",
+      "name": "Viva la vita",
       "type": "APA",
       "brewery": "Pinta",
       "origin": "Poland",
@@ -9,6 +9,16 @@
       "alcohol_content": "6%",
       "hops": "american",
       "malts": "pale ale"
+    },
+    {
+      "name": "Imperator Baltycki",
+      "type": "Baltic Porter",
+      "brewery": "Pinta",
+      "origin": "Poland",
+      "bitterness": "12 IBU",
+      "alcohol_content": "8%",
+      "hops": "marynka",
+      "malts": "caramel"
     }
   ]
 }
