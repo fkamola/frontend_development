@@ -1,3 +1,33 @@
-<p>
-  add-beer works!
-</p>
+<div class="row">
+  <h2>Add Beer</h2>
+  <hr>
+  <div class="col-md-12">
+    <form [formGroup]="beerForm" autocomplete="off" (ngSubmit)="addBeer(beerForm?.value)" novalidate>
+
+      <div class="form-group">
+        <label [ngClass]="{'error' : validateName() }">Name: <input class="form-control" formControlName="name"/></label>
+
+        <em *ngIf="validateName() "> This value is incorrect!</em>
+      </div>
+      <div class="form-group">
+        <label [ngClass]="{'error' : validateBrewery() }">Brewery: <input class="form-control" formControlName="brewery"></label>
+        <em *ngIf="validateBrewery() "> This value is incorrect!</em>
+      </div>
+      <div class="form-group">
+        <label>Style: <input  class="form-control"formControlName="style"></label>
+      </div>
+      <div class="form-group">
+        <label>Bitterness: <input  class="form-control"formControlName="bitterness"></label>
+      </div>
+      <div class="form-group">
+        <label>Alcohol: <input  class="form-control"formControlName="alcohol"></label>
+      </div>
+      <div class="form-group">
+        <label>Description: <input  class="form-control" type="number" formControlName="description"></label>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+    </form>
+  </div>
+</div>

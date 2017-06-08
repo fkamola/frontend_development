@@ -1,3 +1,42 @@
-<p>
-  single-beer works!
-</p>
+<table class="table  table-striped">
+  <thead>
+    <tr>
+      <td><h3>Beer Details</h3></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>{{ beer.name }}</td>
+    </tr>
+    <tr>
+      <td>Brewery</td>
+      <td>{{ beer.brewery }}</td>
+    </tr>
+    <tr>
+      <td>Style</td>
+      <td>{{ beer.style }}</td>
+    </tr>
+    <tr>
+      <td>Bitterness</td>
+      <td>{{ beer.bitterness }}</td>
+    </tr>
+    <tr>
+      <td>Alcohol</td>
+      <td>{{ beer.alcohol }}</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>{{ beer.description }}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="text-center">
+        <button class="btn btn-primary btn-l" [routerLink]="['/beers', beer.id]">Show</button>
+        <i class="fa fa-trash" aria-hidden="true" (click)="removeBeer()"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+ 
