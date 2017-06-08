@@ -3,7 +3,7 @@ import { IBeer } from './ibeer';
 
 @Injectable()
 export class BeersService {
-  id: number = 100;
+  id: number = 10;
 
   getBeers(){
     return BEERS;
@@ -27,46 +27,11 @@ export class BeersService {
 }
 
 const BEERS: IBeer[] = [{
-    id: 0,
+    id: 666,
     name: 'Imperium Atakuje',
     brewery: 'Pinta',
     style: 'Imperial IPA',
     bitterness: '81 IBU',
     alcohol: '7,8%',
     description:  '...'
-  },{
-    id: 1,
-    name: '',
-    brewery: '',
-    style: '',
-    bitterness: '',
-    alcohol: '',
-    description:  ''
-  }, 
-  {
-    id: 2,
-    name: '',
-    brewery: '',
-    style: '',
-    bitterness: '',
-    alcohol: '',
-    description:  ''
-  },
-  {
-    id: 3,
-    name: '',
-    brewery: '',
-    style: '',
-    bitterness: '',
-    alcohol: '',
-    description:  ''
-  },
-  {
-    id: 4,
-    name: '',
-    brewery: '',
-    style: '',
-    bitterness: '',
-    alcohol: '',
-    description:  ''
 }]

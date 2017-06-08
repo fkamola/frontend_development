@@ -1,10 +1,13 @@
 <h2>All Beers</h2>
-<hr>
-     
-<input class="form-control mr-sm-2" type="text" [(ngModel)]="search" (ngModelChange)="searchChange(search)" placeholder="Search">
 
-<single-beer  ng-if="beers" 
-              class="beer-card" 
-              *ngFor="let beer of beers" 
-              [beer]="beer">
-</single-beer>
+     
+<md-content class="md-padding" layout="row" layout-wrap>
+    <div flex="33" ng-repeat="beer in beers">
+        <md-card>
+            <single-beer ng-if="beers"
+                         *ngFor="let beer of beers"
+                         [beer]="beer">
+            </single-beer>
+        </md-card>
+    </div>
+</md-content>
