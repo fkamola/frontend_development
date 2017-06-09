@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { BeersService } from './../beers.service';
-import { MdCardModule } from '@angular/material';
-
 
 @Component({
   selector: 'app-list-beers',
@@ -10,9 +8,6 @@ import { MdCardModule } from '@angular/material';
   styleUrls: ['./list-beers.component.css'],
   
 })
-
-
-
 export class ListBeersComponent implements OnInit {
   beers: any;
   beersBeforeFiltered: any;

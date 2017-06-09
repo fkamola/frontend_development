@@ -4,8 +4,8 @@ export class Beer {
     name: string;
     brewery: string;
     style: string;
-    bitterness: string;
-    alcohol: string;
+    bitterness: number;
+    alcohol: number;
     description: string;
 
     constructor(id, name, brewery, style, bitterness, alcohol, description){

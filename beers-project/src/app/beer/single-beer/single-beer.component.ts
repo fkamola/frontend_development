@@ -4,8 +4,6 @@ import { BeersService} from './../beers.service';
 @Component({
   selector: 'app-single-beer',
   templateUrl: './single-beer.component.html',
-  styleUrls: ['./single-beer.component.scss'],
-  host: {'class': 'col-md-4'}
 })
 
 export class SingleBeerComponent implements OnInit {
@@ -15,9 +13,10 @@ export class SingleBeerComponent implements OnInit {
   constructor(private beersService: BeersService) { }
 
   removeBeer(): any {
-    this.beersService.removeBeer(this.beer.id);
+    if(confirm(`Are you sure to delete ${this.beer.name} ?`)) {
+      this.beersService.removeBeer(this.beer.id);
   }
-
+  }
   ngOnInit() {
     console.log(this.beer);
   }

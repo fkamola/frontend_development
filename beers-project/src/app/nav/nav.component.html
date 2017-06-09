@@ -1,18 +1,7 @@
-  <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    <a class="navbar-brand" [routerLink]="['home']"  href="#">Beers</a>
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['home']" href="#">Beer List</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['beer/add']" href="#">Add Beer</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<div class="pure-menu pure-menu-horizontal">
+    <a href="#" class="pure-menu-heading">Beers</a>
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="#"  [routerLink]="['home']"  class="pure-menu-link">Home</a></li>
+        <li class="pure-menu-item pure-menu-selected"><a href="#" [routerLink]="['beer/add']" class="pure-menu-link">Add beer</a></li>
+    </ul>
+</div>

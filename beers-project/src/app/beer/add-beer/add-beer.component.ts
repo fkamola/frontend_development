@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { BeersService } from './../beers.service';
-import { IBeer } from './../ibeer';
+import { Beer } from './../beer';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
   selector: 'app-add-beer',
   templateUrl: './add-beer.component.html',
-  styleUrls: ['./add-beer.component.css']
 })
 export class AddBeerComponent implements OnInit {
 
-  constructor(private beersService: BeersService) { }
+  constructor(private beersService: BeersService, private router: Router) { }
 
   beerForm: FormGroup;
 
@@ -24,8 +24,8 @@ export class AddBeerComponent implements OnInit {
   private description: FormControl;
 
   ngOnInit() {
-    this.name = new FormControl('', [Validators.required, Validators.minLength(4)]);
-    this.brewery = new FormControl('', [Validators.required, Validators.minLength(4)]);
+    this.name = new FormControl('');
+    this.brewery = new FormControl('');
     this.style = new FormControl('');
     this.bitterness = new FormControl('');
     this.alcohol = new FormControl('');
@@ -41,17 +41,9 @@ export class AddBeerComponent implements OnInit {
     });
   }
 
-  validateName() {
-    return !this.name.valid;
-  }
-
-  validateBrewery() {
-    return !this.brewery.valid;
-  }
-
   addBeer(values): void {
     this.beersService.addBeer(values);
-    console.log(values);
+    this.router.navigate(['/home']);
   }
 
 }

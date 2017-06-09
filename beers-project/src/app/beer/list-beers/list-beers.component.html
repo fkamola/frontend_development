@@ -1,13 +1,10 @@
-<h2>All Beers</h2>
-
-     
-<md-content class="md-padding" layout="row" layout-wrap>
-    <div flex="33" ng-repeat="beer in beers">
-        <md-card>
-            <single-beer ng-if="beers"
-                         *ngFor="let beer of beers"
-                         [beer]="beer">
-            </single-beer>
-        </md-card>
+<div class="pure-u-1 pure-u-md-1-2">
+    <div class="l-box">
+        <h3 class="information-head">All beers</h3>
     </div>
-</md-content>
+</div>
+<br>
+<br>
+<app-single-beer class="single-beer-table" *ngFor="let beer of beers" [beer]="beer">
+ 
+</app-single-beer>

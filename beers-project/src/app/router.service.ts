@@ -9,5 +9,4 @@ export class RouterService {
   canActivate(){
     return false;
   }
-
 }
