@@ -1,0 +1,7 @@
+.pure-menu {
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+
+.pure-menu-link {
+    padding: .5em .7em;
+}

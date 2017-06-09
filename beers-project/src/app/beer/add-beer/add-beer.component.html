@@ -1,0 +1,48 @@
+<div class="pure-u-1 pure-u-md-1-2">
+            <div class="l-box">
+                <h3 class="information-head">New beer</h3>
+            </div>
+        </div>
+<form class="pure-form pure-form-aligned" [formGroup]="beerForm" (ngSubmit)="addBeer(beerForm?.value)" novalidate>
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="name">Name</label>
+            <input class="pure-control" formControlName="name">
+            <span class="pure-form-message-inline">What's it called?</span>
+        </div>
+
+        <div class="pure-control-group">
+            <label for="brewery">Brewery</label>
+            <input class="pure-control" formControlName="brewery">
+            <span class="pure-form-message-inline">Where was it brewed?</span>
+        </div>
+
+        <div class="pure-control-group">
+            <label for="style">Style</label>
+            <input class="pure-control" formControlName="style">
+            <span class="pure-form-message-inline">What style is it?</span>
+        </div>
+
+        <div class="pure-control-group">
+            <label for="bitterness">Bitterness (IBU)</label>
+            <input class="pure-control" formControlName="bitterness">
+            <span class="pure-form-message-inline">How bitter is it?</span>
+        </div>
+
+        <div class="pure-control-group">
+            <label for="alcohol">Alcohol content (%)</label>
+            <input class="pure-control" formControlName="alcohol">
+            <span class="pure-form-message-inline">Is it strong?</span>
+        </div>
+
+        <div class="pure-control-group">
+            <label for="description">Description</label>
+            <input class="pure-control" formControlName="description">
+            <span class="pure-form-message-inline">Describe it!</span>
+        </div>
+
+        <div class="pure-controls">
+            <button type="submit" class="pure-button pure-button-primary">Add</button>
+        </div>
+    </fieldset>
+</form>
